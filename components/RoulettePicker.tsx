@@ -46,13 +46,39 @@ const SEED_TEAMS = [
   "Los BeKa3",
   "Vibe Coding Brotherhood",
   "Sudo",
-  "**PugDebug",
+  "PugDebug",
   "πt",
   "Innova Dreamers",
   "Anthropic",
   "Chispas Team",
   "QuatumChihuahua",
 ];
+
+const TEAM_LINKS: Record<string, string> = {
+  "Neuro Link": "https://faces.app/neuro-link",
+  "Your Hack": "https://faces.app/your-hack",
+  "Furritos Picositos": "https://faces.app/furritos-picositos",
+  "Pepe's": "https://faces.app/pepes",
+  "Banda el Recommit": "https://cheetah-forest-648.faces.site/xfou18v7xtph",
+  "Los Six Severos": "https://opal-lion-491.faces.site/l9gaxlp78rcg",
+  "Los Amigos Macizos": "https://volcano-raven-602.faces.site/8m0zrl23y4gp",
+  "Grupo Menudo": "https://faces.app/grupo-menudo",
+  "Quadretech": "https://spring-spruce-307.faces.site/wivgmiq4c5qj",
+  "Syntropyc": "https://owl-fox-955.faces.site/mep3pso0a21u",
+  "Gangbangers": "https://faces.app/gangbangers",
+  "Predicadores de la IA": "https://faces.app/predicadores-de-la-ia",
+  "Next Station": "https://faces.app/next-station",
+  "UvoxData": "https://faces.app/uvoxdata",
+  "Los BeKa3": "https://faces.app/los-beka3",
+  "Vibe Coding Brotherhood": "https://faces.app/vibe-coding-brotherhood",
+  "Sudo": "https://faces.app/sudo",
+  "PugDebug": "https://faces.app/pugdebug",
+  "πt": "https://faces.app/pit",
+  "Innova Dreamers": "https://faces.app/innova-dreamers",
+  "Authropic": "https://ruby-coast-369.faces.site/703zok05112x",
+  "Chispas Team": "https://faces.app/chispas-team",
+  "QuatumChihuahua": "https://jade-redwood-4.faces.site/l0sct5nl37tg",
+};
 
 type Mode = "terminal" | "reel";
 const pad = (n: number) => String(n).padStart(2, "0");
@@ -846,23 +872,50 @@ export default function RoulettePicker() {
           >
             &gt; LE TOCA PRESENTAR A
           </div>
-          <div
-            style={{
-              fontFamily: DISPLAY,
-              fontWeight: 700,
-              fontSize: "min(11vw,17vh,180px)",
-              lineHeight: 0.95,
-              letterSpacing: "0.01em",
-              color: GREEN,
-              textAlign: "center",
-              textShadow: "0 0 50px rgba(51,224,58,0.45)",
-              animation: "rp-winpop .5s ease both, rp-glitch 4s linear infinite",
-              wordBreak: "break-word",
-              maxWidth: "92vw",
-            }}
-          >
-            {winner}
-          </div>
+          {TEAM_LINKS[winner] ? (
+            <a
+              href={TEAM_LINKS[winner]}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              style={{
+                fontFamily: DISPLAY,
+                fontWeight: 700,
+                fontSize: "min(11vw,17vh,180px)",
+                lineHeight: 0.95,
+                letterSpacing: "0.01em",
+                color: GREEN,
+                textAlign: "center",
+                textShadow: "0 0 50px rgba(51,224,58,0.45)",
+                animation: "rp-winpop .5s ease both, rp-glitch 4s linear infinite",
+                wordBreak: "break-word",
+                maxWidth: "92vw",
+                textDecoration: "underline",
+                textUnderlineOffset: "6px",
+                cursor: "pointer",
+              }}
+            >
+              {winner}
+            </a>
+          ) : (
+            <div
+              style={{
+                fontFamily: DISPLAY,
+                fontWeight: 700,
+                fontSize: "min(11vw,17vh,180px)",
+                lineHeight: 0.95,
+                letterSpacing: "0.01em",
+                color: GREEN,
+                textAlign: "center",
+                textShadow: "0 0 50px rgba(51,224,58,0.45)",
+                animation: "rp-winpop .5s ease both, rp-glitch 4s linear infinite",
+                wordBreak: "break-word",
+                maxWidth: "92vw",
+              }}
+            >
+              {winner}
+            </div>
+          )}
           {allDone && (
             <div
               style={{
