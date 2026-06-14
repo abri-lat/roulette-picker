@@ -29,12 +29,29 @@ const MONO = "var(--font-geist-mono, 'Geist Mono', 'JetBrains Mono', monospace)"
 const DISPLAY = "var(--font-chakra, 'Chakra Petch', sans-serif)";
 
 const SEED_TEAMS = [
-  "LOS HÍBRIDOS",
-  "NEURONAUTAS",
-  "DEBUG DRAGONS",
-  "404 NOT FOUND",
-  "CTRL+ALT+WIN",
-  "BINARY BREW",
+  "Neuro Link",
+  "Your Hack",
+  "Furritos Picositos",
+  "Pepe's",
+  "Banda el Recommit",
+  "Los Six Severos",
+  "Los Amigos Macizos",
+  "Grupo Menudo",
+  "Quadretech",
+  "Syntropyc",
+  "Gangbangers",
+  "Predicadores de la IA",
+  "Next Station",
+  "UvoxData",
+  "Los BeKa3",
+  "Vibe Coding Brotherhood",
+  "Sudo",
+  "**PugDebug",
+  "πt",
+  "Innova Dreamers",
+  "Anthropic",
+  "Chispas Team",
+  "QuatumChihuahua",
 ];
 
 type Mode = "terminal" | "reel";
